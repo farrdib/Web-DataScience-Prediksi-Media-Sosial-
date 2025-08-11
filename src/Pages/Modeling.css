@@ -1,0 +1,150 @@
+/* Wrapper utama container */
+.modeling-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Candara', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Judul utama */
+.modeling-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Container form-model fleksibel */
+.modeling-forms {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* responsif: jika sempit tumpuk kolom */
+}
+
+/* Setiap form model */
+.modeling-form {
+  flex: 1;
+  min-width: 300px; /* agar responsif */
+}
+
+/* Judul form model */
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #457895;
+}
+
+/* Label field */
+.modeling-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Input field */
+.modeling-input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.modeling-input:focus {
+  border-color: #457895;
+  outline: none;
+}
+
+/* Tombol */
+.modeling-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Variasi warna tombol sesuai model */
+.btn-model1 {
+  background-color: #007bff;
+}
+
+.btn-model1:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.btn-model2 {
+  background-color: #17a2b8;
+}
+
+.btn-model2:hover:not(:disabled) {
+  background-color: #0c7b8a;
+}
+
+.btn-server {
+  background-color: #28a745;
+}
+
+.btn-server:hover {
+  background-color: #1e7e34;
+}
+
+.btn-csv {
+  background-color: #444;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.btn-csv:hover {
+  background-color: #222;
+}
+
+/* Pesan hasil prediksi */
+.prediction-result {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Warna background prediksi untuk masing-masing model */
+.prediction-model1 {
+  background-color: #dff0ff;
+  color: #004a8f;
+}
+
+.prediction-model2 {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Pesan error */
+.error-message {
+  color: #dc3545;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive: sempit pakai full width dan tumpuk */
+@media (max-width: 760px) {
+  .modeling-forms {
+    flex-direction: column;
+  }
+}

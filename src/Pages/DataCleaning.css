@@ -1,0 +1,82 @@
+/* Wrapper flex untuk center horizontal dan padding */
+.data-cleaning-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Kontainer utama dengan max-width, responsive dan text-align center */
+.data-cleaning-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Candara', sans-serif;
+  color: #333;
+}
+
+/* Judul utama */
+.data-cleaning-title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #457895;
+  /* Animasi fade in */
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* Section berisi konten tiap bagian */
+.data-cleaning-section {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* Judul sub section */
+.data-cleaning-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #644d3d;
+  border-bottom: 2px solid #457895;
+  padding-bottom: 0.3rem;
+}
+
+/* Paragraph di dalam section */
+.data-cleaning-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Highlight kode inline */
+.data-cleaning-section code {
+  background-color: #e8f0fe;
+  color: #2c60d3;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+  user-select: text;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.data-cleaning-section code:hover {
+  background-color: #b0d1ff;
+}
+
+/* Animasi fadeInDown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

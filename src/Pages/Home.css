@@ -1,0 +1,191 @@
+/* Reset dan font dasar */
+.home {
+  font-family: 'Candara', sans-serif;
+  text-align: center;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero wrapper flex */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap; /* responsif */
+  min-height: 70vh; /* tinggi hero minimal agar center vertikal */
+}
+
+/* Konten teks */
+.hero-content {
+  flex: 1 1 320px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.welcome-title {
+  font-size: 4em;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.welcome-title span {
+  font-size: 1.5em;
+  color: #b84b4b;
+  margin-right: 10px;
+}
+
+.welcome-title .welcome-gif {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* Judul utama */
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #A67B5B;
+  padding-left: 0;
+}
+
+/* Sub judul */
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #6F4E37;
+  padding-left: 0;
+  max-width: 600px;
+}
+
+/* Area gambar di samping */
+.hero-image {
+  flex: 1 1 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: move 5s infinite alternate;
+  min-width: 280px;
+}
+
+/* Atur ukuran gambar dan border radius */
+.hero-image img {
+  max-width: 80%;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Animasi sliding horizontal */
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Gelombang atas dan bawah */
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  background-repeat: repeat-x;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-top {
+  top: 0;
+  background-image: url('path-to-your-top-wave-image.svg'); /* ganti dengan path benar */
+  transform: rotate(180deg);
+}
+
+.wave-bottom {
+  bottom: 0;
+  background-image: url('path-to-your-bottom-wave-image.svg'); /* ganti dengan path benar */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .hero-content, 
+  .hero-image {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .welcome-title {
+    justify-content: center;
+  }
+
+  .title,
+  .subtitle {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 60%;
+    max-height: 200px;
+  }
+}
+
+.description-section,
+.features-menu-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Candara', sans-serif;
+  color: #333;
+}
+
+.description-section h2,
+.features-menu-section h2 {
+  font-size: 2rem;
+  color: #457895; /* sesuaikan warna */
+  border-bottom: 2px solid #457895;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.description-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.features-menu-section ol {
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.features-menu-section li {
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #3b5998;
+}

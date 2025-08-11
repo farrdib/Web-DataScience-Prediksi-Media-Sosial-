@@ -1,0 +1,90 @@
+/* Container utama */
+.data-overview-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Candara', sans-serif;
+  color: #333;
+}
+
+/* Judul utama */
+.data-overview-container h1 {
+  color: #457895;
+  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+/* Section styling */
+.data-overview-container section {
+  margin-bottom: 2.5rem;
+}
+
+/* Subjudul section */
+.data-overview-container h2 {
+  color: #644d3d;
+  border-bottom: 2px solid #457895;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Statistik ringkas */
+.stats-summary p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+/* Tabel preview dataset */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table thead tr {
+  background-color: #A67B5B;
+  color: white;
+}
+
+.data-table th, .data-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f1e9d2;
+  transition: background-color 0.3s ease;
+}
+
+/* Container chart */
+.chart-container {
+  width: 100%;
+  height: 320px;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .data-overview-container h1 {
+    font-size: 2rem;
+  }
+  .data-overview-container h2 {
+    font-size: 1.5rem;
+  }
+  .data-table th, .data-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  .chart-container {
+    height: 250px;
+  }
+}

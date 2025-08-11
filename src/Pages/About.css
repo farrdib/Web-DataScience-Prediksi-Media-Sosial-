@@ -1,0 +1,154 @@
+/* Wrapper flex untuk center horizontal */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Kontainer utama dengan max-width dan responsive */
+.about-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Candara', sans-serif;
+  color: #333;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #457895;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #644d3d;
+  border-bottom: 2px solid #457895;
+  padding-bottom: 0.3rem;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.team-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.photo-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #457895;
+  animation: pulse 2s infinite;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.role {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-links a {
+  color: #457895;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #A67B5B;
+}
+
+.timeline-list {
+  padding-left: 1.2rem;
+}
+
+.timeline-list li {
+  margin-bottom: 0.6rem;
+}
+
+.testimonial-section blockquote {
+  font-style: italic;
+  border-left: 4px solid #457895;
+  padding-left: 1rem;
+  color: #555;
+}
+
+.about-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(69, 120, 149, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px 10px rgba(69, 120, 149, 0);
+  }
+}

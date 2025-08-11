@@ -1,0 +1,14 @@
+.page-break {
+  page-break-before: always; /* untuk browser lama */
+  break-before: page;        /* standar CSS modern */
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+  width: 100%;
+  height: 1px; /* harus ada tinggi supaya efektif */
+}
+
+table, thead, tbody, tr, td, th {
+  page-break-inside: avoid !important; /* menghindari pecah di tengah tabel */
+  break-inside: avoid !important;
+}

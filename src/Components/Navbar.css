@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+nav.navbar {
+  display: flex;
+  flex-direction: column;       /* Susun logo dan menu secara vertikal */
+  align-items: center;          /* Pusatkan semua secara horizontal */
+  background: linear-gradient(90deg, #fafdff 65%, #e9f9f6 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 14px rgba(56,154,184,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 80px;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-logo {
+  margin-bottom: 0.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;      /* Pusatkan logo */
+}
+
+.navbar-logo img {
+  height: 36px;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  opacity: 0.8;
+}
+
+nav.navbar ul {
+  display: flex;               /* Menu horizontal */
+  flex-wrap: nowrap;           /* Jaga menu satu baris */
+  justify-content: center;     /* Pusatkan menu */
+  gap: 1rem;                   /* Jarak antar menu */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+  white-space: nowrap;         /* Agar teks di tiap item tidak pecah baris */
+}
+
+nav.navbar li {
+  white-space: nowrap;         /* Supaya menu item tetap satu baris */
+}
+
+nav.navbar li a {
+  color: #191970;              /* Warna dongker */
+  font-weight: 500;
+  font-size: 0.85rem;          /* Font lebih kecil */
+  text-decoration: none;       /* Hilangkan underline default */
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: relative;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  display: inline-block;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* Hilangkan animasi garis bawah: tidak ada pseudo-element ::after */
+
+/* Hover dan aktif state */
+nav.navbar li a:hover,
+nav.navbar li a.active {
+  color: #FF0000;              /* Warna merah saat hover dan aktif */
+  background-color: #fceaea;   /* Latar merah sangat lembut */
+  transform: scale(1.05);      /* Efek membesar ringan */
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.25); /* Shadow merah halus */
+}
+
+/* Responsif: font sedikit lebih besar dan spasi nyaman */
+@media (max-width: 600px) {
+  nav.navbar ul {
+    gap: 0.7rem;
+  }
+  nav.navbar li a {
+    font-size: 0.95rem;
+    padding: 7px 12px;
+  }
+}
