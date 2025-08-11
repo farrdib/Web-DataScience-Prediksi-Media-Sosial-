@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Navbar dengan link navigasi
+import Navbar from './Components/Navbar'; // Navbar dengan link navigasi
 
 import Home from './Pages/Home';
 import About from './Pages/About';
